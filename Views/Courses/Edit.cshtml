@@ -1,0 +1,124 @@
+﻿@model MvcGolfScorecardApp.Models.Course
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Course</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CourseId" />
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleOne" class="control-label"></label>
+                <input asp-for="HoleOne" class="form-control" />
+                <span asp-validation-for="HoleOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleTwo" class="control-label"></label>
+                <input asp-for="HoleTwo" class="form-control" />
+                <span asp-validation-for="HoleTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleThree" class="control-label"></label>
+                <input asp-for="HoleThree" class="form-control" />
+                <span asp-validation-for="HoleThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleFour" class="control-label"></label>
+                <input asp-for="HoleFour" class="form-control" />
+                <span asp-validation-for="HoleFour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleFive" class="control-label"></label>
+                <input asp-for="HoleFive" class="form-control" />
+                <span asp-validation-for="HoleFive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleSix" class="control-label"></label>
+                <input asp-for="HoleSix" class="form-control" />
+                <span asp-validation-for="HoleSix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleSeven" class="control-label"></label>
+                <input asp-for="HoleSeven" class="form-control" />
+                <span asp-validation-for="HoleSeven" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleEight" class="control-label"></label>
+                <input asp-for="HoleEight" class="form-control" />
+                <span asp-validation-for="HoleEight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleNine" class="control-label"></label>
+                <input asp-for="HoleNine" class="form-control" />
+                <span asp-validation-for="HoleNine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleTen" class="control-label"></label>
+                <input asp-for="HoleTen" class="form-control" />
+                <span asp-validation-for="HoleTen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleEleven" class="control-label"></label>
+                <input asp-for="HoleEleven" class="form-control" />
+                <span asp-validation-for="HoleEleven" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleTwelve" class="control-label"></label>
+                <input asp-for="HoleTwelve" class="form-control" />
+                <span asp-validation-for="HoleTwelve" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleThirteen" class="control-label"></label>
+                <input asp-for="HoleThirteen" class="form-control" />
+                <span asp-validation-for="HoleThirteen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleFourteen" class="control-label"></label>
+                <input asp-for="HoleFourteen" class="form-control" />
+                <span asp-validation-for="HoleFourteen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleFifteen" class="control-label"></label>
+                <input asp-for="HoleFifteen" class="form-control" />
+                <span asp-validation-for="HoleFifteen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleSixteen" class="control-label"></label>
+                <input asp-for="HoleSixteen" class="form-control" />
+                <span asp-validation-for="HoleSixteen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleSeventeen" class="control-label"></label>
+                <input asp-for="HoleSeventeen" class="form-control" />
+                <span asp-validation-for="HoleSeventeen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoleEighteen" class="control-label"></label>
+                <input asp-for="HoleEighteen" class="form-control" />
+                <span asp-validation-for="HoleEighteen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

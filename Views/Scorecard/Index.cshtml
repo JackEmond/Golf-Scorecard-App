@@ -1,0 +1,58 @@
+﻿@using MvcGolfScorecardApp.Services
+@inject HandicapService HandicapService
+@model IEnumerable<MvcGolfScorecardApp.Models.Scorecard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Stats -->
+<div class="index-left">
+    <div class="index-stats-box">
+        <h3>Stats</h3>
+        <div class="hcp">
+            <p>@HandicapService.CalculateHandicap()</p>
+            <small>Handicap</small>
+        </div>
+        <div class="hcp">
+            <p>SCORE</p>
+            <small>Best Score 18 Holes</small>
+        </div>
+        <div class="hcp">
+            <p>SCORE</p>
+            <small>Best Score 9 Holes</small>
+        </div>
+        <a class="link" href="advancedstats">More stats ... </a>
+    </div>
+</div>
+
+<!-- Scores -->
+<div class="index-right">
+    <a class="link" asp-action="Create">Add a Scorecard . . .</a>
+
+    <div class="flex-container none">
+        <div class="items">View</div>
+        <div class="courseName">Course Name</div>
+        <div class="items tees">Tees</div>
+        <div class="items holes"># Holes</div>
+        <div class="items">Score</div>  
+    </div> 
+    
+    @foreach (var item in Model) {
+    <div class="flex-container">
+        <div class="items"><a asp-action="Details" asp-route-id="@item.Id"><img class="icon" src="~/images/view.png"></a></div>
+        <div class="courseName">@Html.DisplayFor(modelItem => item.Course.CourseName)</div>
+        <div class="items tees">Tee</div>
+        <div class="items holes"><img class="icon" src="~/images/18holeflag.jpg"></div>
+        <div class="items">@Html.DisplayFor(modelItem => item.Score)</div>  
+    </div>
+    }
+</div>
+
+
+<!--  
+<div class="index-stats-box">
+    <h3>Add a Scorecard</h3>
+    <a class="link" href="holesplayed">Add Scorecard ... </a>
+</div>
+-->

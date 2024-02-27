@@ -1,0 +1,22 @@
+﻿@model MvcGolfScorecardApp.Models.AdvancedStats
+
+@{
+    ViewData["Title"] = "Advanced Stats";
+}
+
+<h1>Advanced Stats</h1>
+
+<hr />
+
+<p> @Html.DisplayFor(model => model.AverageScorePar3) </p>
+<p> @Html.DisplayFor(model => model.TotalNumberOfStrokes) </p>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

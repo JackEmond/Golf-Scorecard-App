@@ -1,0 +1,317 @@
+
+h1, h2, h3, p, a, div, fieldset {
+    font-family: 'Slabo 27px', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    font-weight: 100;
+    padding-bottom: 3px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+/******************
+        Header 
+  *******************/
+
+header {
+    overflow: hidden;
+    background-color: #06301b;
+    padding: 0px 14%;
+    height: 12vh;
+    color: #fff;
+    margin: 0px;
+}
+
+.align-logo-middle {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+header .header-right a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5vh 40px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+header img {
+    vertical-align: middle;
+    max-height: 8vh;
+}
+
+.header-right {
+    float: right; /* Remove this Float */
+}
+
+@media only screen and (max-width: 800px) {
+    .header-right {
+        display: none;
+    }
+}
+
+
+/* Scorecard Details Page */
+
+.items-scorecard {
+    flex-basis: 8%;
+}
+
+.items-info {
+    flex-basis: 20%;
+}
+
+.scorecard-top .left {
+    float: left;
+}
+
+.scorecard-top > .rightText {
+    float: right;
+}
+
+.scorecard-top div {
+    font-size: 32px;
+}
+
+.scorecard-top {
+    border: 1px solid black;
+    padding: 20px 6% 60px 6%;
+}
+
+.scorecard-top h2 {
+    padding: 0px;
+    text-align: center;
+    margin: 60px 0 0 0;
+    color: #313131;
+    font-size: 60px;
+}
+  
+
+.flex-container-scorecard {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(0, 0, 0);
+}
+
+.flex-container-scorecard > .hole {
+    background-color: #1a6d43;
+    color: #fff;
+}
+
+.flex-container-scorecard > .par {
+    background-color: #a7aa82;
+}
+
+.flex-container-scorecard > div {
+    background-color: rgb(255, 255, 255);
+    margin: 1px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+
+
+/********************
+      Index Page
+  ********************/
+main {
+    margin: auto;
+    max-width: 1600px;
+}
+
+/*Switch to css grid */
+.index-left {
+    width: 25%;
+    float: left;
+}
+
+.index-right {
+    padding-top: 60px;
+    margin: 20px;
+    width: 70%;
+    float: right;
+}
+
+.index-stats-box {
+    margin: 55px 20px 0 20px;
+    border: 1px solid rgb(158, 158, 158);
+    box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+    .index-stats-box h3 {
+        font-size: 32px;
+        margin: 20px 0 0 0;
+        font-weight: 100;
+    }
+
+    .index-stats-box .hcp {
+        background-color: #06301b;
+        color: #fff;
+        padding: 5px;
+        margin: 20px 0;
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+        .index-stats-box .hcp p {
+            margin: 0;
+        }
+
+        .index-stats-box .hcp small {
+            font-size: 14px;
+            padding: 0px;
+            margin: 0;
+        }
+
+    .index-stats-box a {
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: 20px;
+    }
+
+.flex-container {
+    box-shadow: 3px 3px 5px #888888;
+    display: flex;
+    height: 5em;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(255, 255, 255);
+}
+
+.none {
+    padding: 0;
+    border: none;
+    height: 3em;
+    box-shadow: none;
+}
+
+    .none .items, .none .courseName {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+.link {
+    color: #017dab;
+    font-weight: bold;
+}
+
+.courseName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-basis: 100%;
+}
+
+.flex-container > div {
+    background-color: rgb(255, 255, 255);
+    margin: 1px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.whichcourse > .view {
+    flex-basis: 30%;
+}
+
+.icon {
+    height: 40px;
+    margin-top: 5px;
+}
+
+.items {
+    color: rgb(0, 0, 0);
+    flex-basis: 12%;
+}
+
+
+/* Create Page */
+.items-scorecard input[type=number] {
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#search-courses input, label, input[type=date], input[type=text], input[type=number], #search-courses button, #course-select select {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+input[type=date], input[type=text], input[type=number], #course-select select {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+#course-select{
+    padding: 0 0 10px 0;
+}
+
+
+/******************
+      Buttons
+*******************/
+
+.crud-button {
+    padding: 20px 10px;
+    font-size: 1.5em;
+    margin: 30px 0;
+    border: none;
+    min-width: 140px;
+    color: #fff;
+    text-align: center;
+}
+
+.create{
+    background-color: #06301b;
+}
+
+.edit {
+    background-color: #06301b;
+}
+
+.delete {
+    background-color: #7a1a1a;
+    float: right;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between items */
+    align-items: center; /* Aligns items vertically */
+}

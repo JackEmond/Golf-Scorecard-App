@@ -1,0 +1,132 @@
+﻿@model MvcGolfScorecardApp.Models.Course
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleOne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleOne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleTwo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleTwo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleThree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleThree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleFour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleFour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleFive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleFive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleSix)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleSix)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleSeven)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleSeven)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleEight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleEight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleNine)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleNine)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleTen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleTen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleEleven)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleEleven)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleTwelve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleTwelve)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleThirteen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleThirteen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleFourteen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleFourteen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleFifteen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleFifteen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleSixteen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleSixteen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleSeventeen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleSeventeen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoleEighteen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoleEighteen)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CourseId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Scorecard Tracker</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/MvcGolfScorecardApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script> 
+
+</head>
+<body>
+    <header>
+        <span class="align-logo-middle"></span>
+       <a asp-area="" asp-controller="scorecard" asp-action="Index"><img height=100vh src="~/images/logo.png"></a>
+        <div class="header-right">
+            <a>Advanced Stats</a>
+            <a> by Jack Emond </a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

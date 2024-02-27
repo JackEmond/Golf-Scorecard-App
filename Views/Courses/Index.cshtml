@@ -1,0 +1,143 @@
+﻿@model IEnumerable<MvcGolfScorecardApp.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleOne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleTwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleThree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleFour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleFive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleSix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleSeven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleEight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleNine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleTen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleEleven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleTwelve)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleThirteen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleFourteen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleFifteen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleSixteen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleSeventeen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoleEighteen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleSix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleSeven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleEight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleNine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleEleven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleTwelve)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleThirteen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleFourteen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleFifteen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleSixteen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleSeventeen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoleEighteen)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CourseId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CourseId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CourseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

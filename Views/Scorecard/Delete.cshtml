@@ -1,0 +1,107 @@
+﻿@model MvcGolfScorecardApp.Models.Scorecard
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="scorecard-top">
+    <div class="viewScorecard-Right">TBD Tees</div>
+    <h2>@Html.DisplayFor(model => model.Course.CourseName)</h2>
+    <div class="left">@Html.DisplayFor(model => model.DatePlayed)</div>
+    <div class="rightText">Score: TBD</div>
+</div>    
+
+<div class="flex-container-scorecard">
+    <div class="items-info hole">Hole #</div>  
+    <div class="items-scorecard hole">1</div>  
+    <div class="items-scorecard hole">2</div>  
+    <div class="items-scorecard hole">3</div>  
+    <div class="items-scorecard hole">4</div>  
+    <div class="items-scorecard hole">5</div>  
+    <div class="items-scorecard hole">6</div>  
+    <div class="items-scorecard hole">7</div>  
+    <div class="items-scorecard hole">8</div>  
+    <div class="items-scorecard hole">9</div>  
+    <div class="items-scorecard hole">OUT</div>  
+</div> 
+
+<!-- What is your score for holes 1 - 9 -->
+<div class="flex-container-scorecard">
+    <div class="items-info"> Score</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleOne)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleTwo)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleThree)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleFour)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleFive)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleSix)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleSeven)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleEight)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleNine)</div> 
+    <div class="items-scorecard">TBD</div>  
+</div> 
+
+    <!-- What is par for holes 1 - 9 -->
+<div class="flex-container-scorecard">
+    <div class="items-info par"> Par </div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleOne)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleTwo)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleThree)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleFour)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleFive)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleSix)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleSeven)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleEight)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleNine)</div>  
+    <div class="items-scorecard par">TBD</div>  
+</div> 
+    
+<!-- Holes 10 - 18 -->
+<div class="flex-container-scorecard">
+    <div class="items-info hole">Hole #</div>  
+    <div class="items-scorecard hole">10</div>  
+    <div class="items-scorecard hole">11</div>  
+    <div class="items-scorecard hole">12</div>  
+    <div class="items-scorecard hole">13</div>  
+    <div class="items-scorecard hole">14</div>  
+    <div class="items-scorecard hole">15</div>  
+    <div class="items-scorecard hole">16</div>  
+    <div class="items-scorecard hole">17</div>  
+    <div class="items-scorecard hole">18</div>  
+    <div class="items-scorecard hole">IN</div>  
+</div> 
+<!-- What is your score for holes 10 - 18 -->
+
+<div class="flex-container-scorecard">
+    <div class="items-info"> Score</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleTen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleEleven)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleTwelve)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleThirteen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleFourteen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleFifteen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleSixteen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleSeventeen)</div>  
+    <div class="items-scorecard">@Html.DisplayFor(model => model.HoleEighteen)</div> 
+    <div class="items-scorecard">TBD</div>  
+</div> 
+    <!-- What is par for holes 10 - 18 -->
+<div class="flex-container-scorecard">
+    <div class="items-info par"> Score</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleTen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleEleven)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleTwelve)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleThirteen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleFourteen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleFifteen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleSixteen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleSeventeen)</div>  
+    <div class="items-scorecard par">@Html.DisplayFor(model => model.Course.HoleEighteen)</div> 
+    <div class="items-scorecard par">TBD</div>  
+</div> 
+    
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+</form>
+

@@ -1,0 +1,204 @@
+﻿@model MvcGolfScorecardApp.Models.Scorecard
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+     <script src="@Url.Content("~/js/ScorecardCreate.js")"></script>
+
+<br />
+<br />
+<br />
+
+<!-- Course Name and Information -->
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly"></div>
+
+
+    <div id="course-select">
+        <label asp-for="Course"></label>
+        <select onchange="showParData()" asp-for="CourseId" asp-items="ViewBag.CourseId">
+        <option value="">-- Select Course --</option>
+        </select>
+        <span asp-validation-for="CourseId" class="text-danger" />
+    </div>
+
+
+    <div class="alignCenter">
+        <label asp-for="DatePlayed" ></label>
+        <input asp-for="DatePlayed"/>
+    </div>
+    
+    <br />
+
+
+    <!--=-------------------
+        Scorecard 
+    ----------------------->
+
+    <!-- Holes 1-9 -->
+    <div class="flex-container-scorecard">
+        <div class="items-info hole">Hole #</div>
+        <div class="items-scorecard hole">1</div>
+        <div class="items-scorecard hole">2</div>
+        <div class="items-scorecard hole">3</div>
+        <div class="items-scorecard hole">4</div>
+        <div class="items-scorecard hole">5</div>
+        <div class="items-scorecard hole">6</div>
+        <div class="items-scorecard hole">7</div>
+        <div class="items-scorecard hole">8</div>
+        <div class="items-scorecard hole">9</div>
+        <div class="items-scorecard hole">OUT</div>
+    </div>
+    
+    <!-- What is your score for holes 1 - 9 -->
+    <div class="flex-container-scorecard">
+        <div class="items-info">Score</div>
+        <div class="items-scorecard">
+            <input asp-for="HoleOne" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleTwo" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleThree" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleFour" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleFive" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleSix" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleSeven" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleEight" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleNine" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            TOT
+        </div>
+    </div>
+
+    <!-- Show Par for holes 1 - 9  -->
+    <div class="flex-container-scorecard">
+        <div class="items-info par"> Par </div>  
+        <div class="items-scorecard" id="parholeOne">TBD</div>  
+        <div class="items-scorecard" id="parholeTwo">TBD</div>  
+        <div class="items-scorecard" id="parholeThree">TBD</div>  
+        <div class="items-scorecard" id="parholeFour">TBD</div>  
+        <div class="items-scorecard" id="parholeFive">TBD</div>  
+        <div class="items-scorecard" id="parholeSix">TBD</div>  
+        <div class="items-scorecard" id="parholeSeven">TBD</div>  
+        <div class="items-scorecard" id="parholeEight">TBD</div>  
+        <div class="items-scorecard" id="parholeNine">TBD</div>  
+        <div class="items-scorecard par">Final</div>  
+    </div> 
+
+    <br />
+    <br />
+
+    <!-- Holes 10 - 18 -->
+    <div class="flex-container-scorecard">
+        <div class="items-info hole">Hole #</div>
+        <div class="items-scorecard hole">10</div>
+        <div class="items-scorecard hole">11</div>
+        <div class="items-scorecard hole">12</div>
+        <div class="items-scorecard hole">13</div>
+        <div class="items-scorecard hole">14</div>
+        <div class="items-scorecard hole">15</div>
+        <div class="items-scorecard hole">16</div>
+        <div class="items-scorecard hole">17</div>
+        <div class="items-scorecard hole">18</div>
+        <div class="items-scorecard hole">IN</div>
+    </div>
+    
+    <!-- What is your score for holes 10 - 18 -->
+    <div class="flex-container-scorecard">
+        <div class="items-info">Score</div>
+        <div class="items-scorecard">
+            <input asp-for="HoleTen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleEleven" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleTwelve" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleThirteen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleFourteen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleFifteen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleSixteen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleSeventeen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            <input asp-for="HoleEighteen" class="form-control" />
+        </div>
+        <div class="items-scorecard">
+            TOT
+        </div>
+    </div>
+    <div class="flex-container-scorecard">
+        <div class="items-info par"> Par </div>  
+        <div class="items-scorecard" id="parholeTen">TBD</div>  
+        <div class="items-scorecard" id="parholeEleven">TBD</div>  
+        <div class="items-scorecard" id="parholeTwelve">TBD</div>  
+        <div class="items-scorecard" id="parholeThirteen">TBD</div>  
+        <div class="items-scorecard" id="parholeFourteen">TBD</div>  
+        <div class="items-scorecard" id="parholeFifteen">TBD</div>  
+        <div class="items-scorecard" id="parholeSixteen">TBD</div>  
+        <div class="items-scorecard" id="parholeSeventeen">TBD</div>  
+        <div class="items-scorecard" id="parholeEighteen">TBD</div>  
+        <div class="items-scorecard par">Final</div>  
+    </div> 
+
+    <br />
+
+     <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary create crud-button" />
+    </div>
+
+    <span asp-validation-for="HoleOne" class="text-danger"></span>
+    <span asp-validation-for="HoleTwo" class="text-danger"></span>
+    <span asp-validation-for="HoleThree" class="text-danger"></span>
+    <span asp-validation-for="HoleFour" class="text-danger"></span>
+    <span asp-validation-for="HoleFive" class="text-danger"></span>
+    <span asp-validation-for="HoleSix" class="text-danger"></span>
+    <span asp-validation-for="HoleSeven" class="text-danger"></span>
+    <span asp-validation-for="HoleEight" class="text-danger"></span>
+    <span asp-validation-for="HoleNine" class="text-danger"></span>
+    <span asp-validation-for="HoleTen" class="text-danger"></span>
+    <span asp-validation-for="HoleEleven" class="text-danger"></span>
+    <span asp-validation-for="HoleTwelve" class="text-danger"></span>
+    <span asp-validation-for="HoleThirteen" class="text-danger"></span>
+    <span asp-validation-for="HoleFourteen" class="text-danger"></span>
+    <span asp-validation-for="HoleFifteen" class="text-danger"></span>
+    <span asp-validation-for="HoleSixteen" class="text-danger"></span>
+    <span asp-validation-for="HoleSeventeen" class="text-danger"></span>
+    <span asp-validation-for="HoleEighteen" class="text-danger"></span>
+
+</form>
+
+<div>
+    <a asp-action="Index" >Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
