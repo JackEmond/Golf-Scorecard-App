@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components.RenderTree;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -46,8 +47,10 @@ namespace MvcGolfScorecardApp.Controllers
         }
 
         // GET: Courses/Create
-        public IActionResult Create()
+        public IActionResult Create(string returnUrl)
         {
+            //If the returnUrl is empty then set it to "default". Which will redirect to the index page of the CoursesController
+            ViewBag.ReturnUrl = (string.IsNullOrEmpty(returnUrl))? "default" : returnUrl;
             return View();
         }
 
@@ -56,13 +59,18 @@ namespace MvcGolfScorecardApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CourseId,CourseName,HoleOne,HoleTwo,HoleThree,HoleFour,HoleFive,HoleSix,HoleSeven,HoleEight,HoleNine,HoleTen,HoleEleven,HoleTwelve,HoleThirteen,HoleFourteen,HoleFifteen,HoleSixteen,HoleSeventeen,HoleEighteen")] Course course)
+        public async Task<IActionResult> Create([Bind("CourseId,CourseName,HleOne,HoleTwo,HoleThree,HoleFour,HoleFive,HoleSix,HoleSeven,HoleEight,HoleNine,HoleTen,HoleEleven,HoleTwelve,HoleThirteen,HoleFourteen,HoleFifteen,HoleSixteen,HoleSeventeen,HoleEighteen")] Course course, string returnUrl)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(course);
                 await _context.SaveChangesAsync();
+                
+                if (returnUrl == "ScorecardCreate")
+                    return RedirectToAction("Create", "Scorecard");
+                
                 return RedirectToAction(nameof(Index));
+
             }
             return View(course);
         }

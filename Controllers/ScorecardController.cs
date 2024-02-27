@@ -85,6 +85,7 @@ namespace MvcGolfScorecardApp.Controllers
             return View(scorecard);
         }
 
+
         public ActionResult GetCourseInfo(int selectedCourse)
         {
             var CourseData = (from c in _context.Course
