@@ -1,7 +1,7 @@
 ﻿@model MvcGolfScorecardApp.Models.Scorecard
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Add Scorecard";
 }
 
 
@@ -29,6 +29,7 @@
     <div class="alignCenter">
         <label asp-for="DatePlayed" ></label>
         <input asp-for="DatePlayed"/>
+        <span asp-validation-for="DatePlayed" class="text-danger" />
     </div>
     
     <br />
@@ -171,15 +172,38 @@
 
     <br />
 
+
+    <span asp-validation-for="HoleOne" class="text-danger"></span>
+    <span asp-validation-for="HoleTwo" class="text-danger"></span>
+    <span asp-validation-for="HoleThree" class="text-danger"></span>
+    <span asp-validation-for="HoleFour" class="text-danger"></span>
+    <span asp-validation-for="HoleFive" class="text-danger"></span>
+    <span asp-validation-for="HoleSix" class="text-danger"></span>
+    <span asp-validation-for="HoleSeven" class="text-danger"></span>
+    <span asp-validation-for="HoleEight" class="text-danger"></span>
+    <span asp-validation-for="HoleNine" class="text-danger"></span>
+    <span asp-validation-for="HoleTen" class="text-danger"></span>
+    <span asp-validation-for="HoleEleven" class="text-danger"></span>
+    <span asp-validation-for="HoleTwelve" class="text-danger"></span>
+    <span asp-validation-for="HoleThirteen" class="text-danger"></span>
+    <span asp-validation-for="HoleFourteen" class="text-danger"></span>
+    <span asp-validation-for="HoleFifteen" class="text-danger"></span>
+    <span asp-validation-for="HoleSixteen" class="text-danger"></span>
+    <span asp-validation-for="HoleSeventeen" class="text-danger"></span>
+    <span asp-validation-for="HoleEighteen" class="text-danger"></span>
+
+
      <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary create crud-button" />
     </div>
+
 
 
 </form>
 
 <div>
     <a asp-action="Index" >Back to List</a>
+
 </div>
 
 @section Scripts {
