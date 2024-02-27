@@ -59,7 +59,7 @@ namespace MvcGolfScorecardApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CourseId,CourseName,HleOne,HoleTwo,HoleThree,HoleFour,HoleFive,HoleSix,HoleSeven,HoleEight,HoleNine,HoleTen,HoleEleven,HoleTwelve,HoleThirteen,HoleFourteen,HoleFifteen,HoleSixteen,HoleSeventeen,HoleEighteen")] Course course, string returnUrl)
+        public async Task<IActionResult> Create([Bind("CourseId,CourseName,HoleOne,HoleTwo,HoleThree,HoleFour,HoleFive,HoleSix,HoleSeven,HoleEight,HoleNine,HoleTen,HoleEleven,HoleTwelve,HoleThirteen,HoleFourteen,HoleFifteen,HoleSixteen,HoleSeventeen,HoleEighteen")] Course course, string returnUrl)
         {
             if (ModelState.IsValid)
             {
