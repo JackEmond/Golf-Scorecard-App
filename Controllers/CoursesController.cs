@@ -65,9 +65,10 @@ namespace MvcGolfScorecardApp.Controllers
             {
                 _context.Add(course);
                 await _context.SaveChangesAsync();
+
                 
                 if (returnUrl == "ScorecardCreate")
-                    return RedirectToAction("Create", "Scorecard");
+                    return RedirectToAction("Create", "Scorecard", new { courseID = course.CourseId});
                 
                 return RedirectToAction(nameof(Index));
 
