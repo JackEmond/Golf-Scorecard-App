@@ -2,16 +2,15 @@
 
 @{
     ViewData["Title"] = "Add Scorecard";
+    ViewBag.HeaderTitle = "Add a Scorecard";
+    ViewBag.HeaderBackButtonUrl = "../Scorecard";
 }
 
 
-     <script src="@Url.Content("~/js/ScorecardCreate.js")"></script>
+<script src="@Url.Content("~/js/ScorecardCreate.js")"></script>
 
-<div class="header-container">
-    <a asp-action="Index" class="back-button">&#8592;</a>
-    <h1>Add a Scorecard</h1>
-</div>
-<hr />
+<partial name="HeaderWithBackButtonPartial" />
+
 <br />
 
 <!-- Course Name and Information -->

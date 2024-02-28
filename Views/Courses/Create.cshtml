@@ -2,16 +2,13 @@
 
 @{
     ViewData["Title"] = "Create a Course";
+    
+    ViewBag.HeaderTitle = "Create a Course";
+    ViewBag.HeaderBackButtonUrl = ViewBag.ReturnUrl == "ScorecardCreate" ? "../Scorecard/Create" : "Index";
 }
 
-<div class="header-container">
-    @(ViewBag.ReturnUrl == "ScorecardCreate" ?
-        Html.Raw("<a href='../Scorecard/Create' class='back-button'>&#8592;</a>") :
-        Html.Raw("<a href='Index' class='back-button'>&#8592;</a>")
-        ) 
-    <h1>Create a Course</h1>
-</div>
-<hr />
+<partial name="HeaderWithBackButtonPartial" />
+
 
 <form asp-action="Create">
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
