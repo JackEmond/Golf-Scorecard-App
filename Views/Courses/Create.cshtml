@@ -5,8 +5,10 @@
 }
 
 <div class="header-container">
-
-    <a asp-action="Index" class="back-button">&#8592;</a>
+    @(ViewBag.ReturnUrl == "ScorecardCreate" ?
+        Html.Raw("<a href='../Scorecard/Create' class='back-button'>&#8592;</a>") :
+        Html.Raw("<a href='Index' class='back-button'>&#8592;</a>")
+        ) 
     <h1>Create a Course</h1>
 </div>
 <hr />
