@@ -315,3 +315,40 @@ input[type=date], input[type=text], input[type=number], #course-select select {
     justify-content: space-between; /* Adjusts spacing between items */
     align-items: center; /* Aligns items vertically */
 }
+
+.back-button {
+    display: inline-block;
+    width: 50px; /* Diameter of the circle */
+    height: 50px; /* Diameter of the circle */
+    background-color: #000; /* Button color */
+    color: white; /* Arrow color */
+    text-align: center;
+    line-height: 50px; /* Center the arrow vertically */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 24px; /* Arrow size */
+    text-decoration: none; /* Remove underline from the link */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add a shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Optional: add transition for hover effect */
+    position: absolute;
+    left: 0; /* Align to the very left */
+}
+
+    .back-button:hover {
+        transform: scale(1.05); /* Optional: slightly increase size on hover */
+    }
+
+.header-container {
+    display: flex;
+    justify-content: center; /* Center children */
+    align-items: center; /* Center children vertically */
+    position: relative; /* Needed for absolute positioning of the back button */
+}
+
+.header-container h1 {
+    /* Ensure the H1 takes up maximum width to remain centered */
+    flex-grow: 1;
+    text-align: center;
+    margin: 40px;
+}
+
+

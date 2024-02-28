@@ -7,32 +7,30 @@
 
      <script src="@Url.Content("~/js/ScorecardCreate.js")"></script>
 
-<br />
-<br />
+<div class="header-container">
+    <a asp-action="Index" class="back-button">&#8592;</a>
+    <h1>Add a Scorecard</h1>
+</div>
+<hr />
 <br />
 
 <!-- Course Name and Information -->
 <form asp-action="Create">
-    <div asp-validation-summary="ModelOnly"></div>
+        <div asp-validation-summary="ModelOnly"></div>
 
-
-    <div id="course-select">
         <label asp-for="Course"></label>
         <select onchange="showParData()" asp-for="CourseId" asp-items="ViewBag.CourseId">
         <option value="">-- Select Course --</option>
         </select>
         <a class="link" href="../Courses/Create?returnUrl=ScorecardCreate">Create A New Course -></a>
-        <span asp-validation-for="CourseId" class="text-danger" />
-    </div>
 
 
-    <div class="alignCenter">
         <label asp-for="DatePlayed" ></label>
         <input asp-for="DatePlayed"/>
-        <span asp-validation-for="DatePlayed" class="text-danger" />
-    </div>
     
     <br />
+    <br />
+
 
 
     <!--=-------------------
@@ -170,9 +168,6 @@
         <div class="items-scorecard par">Final</div>  
     </div> 
 
-    <br />
-
-
     <span asp-validation-for="HoleOne" class="text-danger"></span>
     <span asp-validation-for="HoleTwo" class="text-danger"></span>
     <span asp-validation-for="HoleThree" class="text-danger"></span>
@@ -191,6 +186,8 @@
     <span asp-validation-for="HoleSixteen" class="text-danger"></span>
     <span asp-validation-for="HoleSeventeen" class="text-danger"></span>
     <span asp-validation-for="HoleEighteen" class="text-danger"></span>
+    <span asp-validation-for="DatePlayed" class="text-danger"></span>
+    <span asp-validation-for="CourseId" class="text-danger"></span>
 
 
      <div class="form-group">
@@ -201,10 +198,6 @@
 
 </form>
 
-<div>
-    <a asp-action="Index" >Back to List</a>
-
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
