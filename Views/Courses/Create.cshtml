@@ -4,9 +4,11 @@
     ViewData["Title"] = "Create a Course";
 }
 
-<h1>Create a Course</h1>
+<div class="header-container">
 
-<h4>Course</h4>
+    <a asp-action="Index" class="back-button">&#8592;</a>
+    <h1>Create a Course</h1>
+</div>
 <hr />
 
 <form asp-action="Create">
@@ -141,10 +143,6 @@
         <input type="submit" value="Create" class="btn btn-primary create crud-button" />
     </div>
 </form>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
