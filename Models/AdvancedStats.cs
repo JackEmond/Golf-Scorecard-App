@@ -20,5 +20,8 @@
         public double AverageScorePar5 { get; set; }
 
 
+
+
+
     }
 }

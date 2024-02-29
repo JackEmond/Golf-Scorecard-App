@@ -18,12 +18,19 @@
 
     <fieldset>
         <legend>@Html.DisplayNameFor(model => model.AverageScorePar3)</legend>
-        <h3>@Html.DisplayFor(model => model.AverageScorePar3)</h3>
+        <h3>@(Model.AverageScorePar3 == 0 ? "N/A" : Model.AverageScorePar3.ToString())</h3>
     </fieldset>
 
+
     <fieldset>
-        <legend>TBD</legend>
-        <h3>0</h3>
+        <legend>@Html.DisplayNameFor(model => model.AverageScorePar4)</legend>
+        <h3>@(Model.AverageScorePar4 == 0 ? "N/A" : Model.AverageScorePar4.ToString())</h3>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(model => model.AverageScorePar5)</legend>
+        <h3>@(Model.AverageScorePar5 == 0 ? "N/A" : Model.AverageScorePar5.ToString())</h3>
     </fieldset>
 
     <fieldset>
