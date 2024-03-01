@@ -50,6 +50,23 @@ namespace MvcGolfScorecardApp.Controllers
                 .AsEnumerable()
                 .Select(s => new{Birdies = new List<int>{
                     s.scorecard.HoleOne - s.Course.HoleOne == value? 1: 0,
+                    s.scorecard.HoleTwo - s.Course.HoleTwo == value? 1: 0,
+                    s.scorecard.HoleThree - s.Course.HoleThree == value? 1: 0,
+                    s.scorecard.HoleFour - s.Course.HoleFour == value? 1: 0,
+                    s.scorecard.HoleFive - s.Course.HoleFive == value? 1: 0,
+                    s.scorecard.HoleSix - s.Course.HoleSix == value? 1: 0,
+                    s.scorecard.HoleSeven - s.Course.HoleSeven == value? 1: 0,
+                    s.scorecard.HoleEight - s.Course.HoleEight == value? 1: 0,
+                    s.scorecard.HoleNine - s.Course.HoleNine == value? 1: 0,
+                    s.scorecard.HoleTen - s.Course.HoleTen == value? 1: 0,
+                    s.scorecard.HoleEleven - s.Course.HoleEleven == value? 1: 0,
+                    s.scorecard.HoleTwelve - s.Course.HoleTwelve == value? 1: 0,
+                    s.scorecard.HoleThirteen - s.Course.HoleThirteen == value? 1: 0,
+                    s.scorecard.HoleFourteen - s.Course.HoleFourteen == value? 1: 0,
+                    s.scorecard.HoleFifteen - s.Course.HoleFifteen == value? 1: 0,
+                    s.scorecard.HoleSixteen - s.Course.HoleSixteen == value? 1: 0,
+                    s.scorecard.HoleSeventeen - s.Course.HoleSeventeen == value? 1: 0,
+                    s.scorecard.HoleEighteen - s.Course.HoleEighteen == value? 1: 0
                     }
                 })
                 .Sum(s => s.Birdies.Sum());
