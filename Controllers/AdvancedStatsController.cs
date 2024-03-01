@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MvcGolfScorecardApp.Data;
 using MvcGolfScorecardApp.Models;
+using System.Linq;
 
 namespace MvcGolfScorecardApp.Controllers
 {
@@ -18,6 +19,8 @@ namespace MvcGolfScorecardApp.Controllers
         {
 
             var totalNumberOfStrokes = _context.Scorecard.Sum(s => (int)(s.HoleOne + s.HoleTwo + s.HoleThree + s.HoleFour + s.HoleFive + s.HoleSix + s.HoleSeven + s.HoleEight + s.HoleNine + s.HoleTen + s.HoleEleven + s.HoleTwelve + s.HoleThirteen + s.HoleFourteen + s.HoleFifteen + s.HoleSixteen + s.HoleSeventeen + s.HoleEighteen));
+            var bestScore18Holes = _context.Scorecard.Min(s => (int)(s.HoleOne + s.HoleTwo + s.HoleThree + s.HoleFour + s.HoleFive + s.HoleSix + s.HoleSeven + s.HoleEight + s.HoleNine + s.HoleTen + s.HoleEleven + s.HoleTwelve + s.HoleThirteen + s.HoleFourteen + s.HoleFifteen + s.HoleSixteen + s.HoleSeventeen + s.HoleEighteen));
+
 
             var statsViewModel = new AdvancedStats
             {
@@ -25,9 +28,32 @@ namespace MvcGolfScorecardApp.Controllers
                 AverageScorePar3 = getAverageScorePar(3),
                 AverageScorePar4 = getAverageScorePar(4),
                 AverageScorePar5 = getAverageScorePar(5),
+                BestScore18Holes = bestScore18Holes,
+                TotalNumberOfBirdies = getTotalNumberOf(-1),
+                TotalNumberOfPars = getTotalNumberOf(0),
+                TotalNumberOfEagles = getTotalNumberOf(-2)
             };
 
             return View(statsViewModel);
+        }
+
+        private int getTotalNumberOf(int value)
+        {
+            //Get total number of pars/birdies/eagles for all scorecards
+            // int value is relative relation to par ( par = 0, birdie = -1, eagle = -2)
+            return _context.Scorecard
+                .Select(s => new
+                {
+                    s.Course,
+                    scorecard = s
+                })
+                .AsEnumerable()
+                .Select(s => new{Birdies = new List<int>{
+                    s.scorecard.HoleOne - s.Course.HoleOne == value? 1: 0,
+                    }
+                })
+                .Sum(s => s.Birdies.Sum());
+
         }
 
         private double getAverageScorePar(int par)
@@ -38,7 +64,7 @@ namespace MvcGolfScorecardApp.Controllers
                     s.Course,
                     scorecard = s
                 })
-                .AsEnumerable() // Switching to client-side evaluation for the complex conditional logic
+                .AsEnumerable() 
             .SelectMany(s => new List<int?>
             {
                 s.Course.HoleOne == par ? s.scorecard.HoleOne : (int?)null,

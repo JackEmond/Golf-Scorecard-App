@@ -12,11 +12,6 @@
 
 <section class="advancedstats">
     <fieldset>
-        <legend>@Html.DisplayNameFor(model => model.TotalNumberOfStrokes)</legend>
-        <h3>@Html.DisplayFor(model => model.TotalNumberOfStrokes)</h3>
-    </fieldset>
-
-    <fieldset>
         <legend>@Html.DisplayNameFor(model => model.AverageScorePar3)</legend>
         <h3>@(Model.AverageScorePar3 == 0 ? "N/A" : Model.AverageScorePar3.ToString())</h3>
     </fieldset>
@@ -34,19 +29,30 @@
     </fieldset>
 
     <fieldset>
-        <legend>TBD</legend>
-        <h3>0</h3>
+        <legend>@Html.DisplayNameFor(model => model.TotalNumberOfStrokes)</legend>
+        <h3>@Html.DisplayFor(model => model.TotalNumberOfStrokes)</h3>
     </fieldset>
 
     <fieldset>
-        <legend>TBD</legend>
-        <h3>0</h3>
+        <legend>@Html.DisplayNameFor(model => model.BestScore18Holes)</legend>
+        <h3>@Html.DisplayFor(model => model.BestScore18Holes)</h3>
     </fieldset>
 
     <fieldset>
-        <legend>TBD</legend>
-        <h3>0</h3>
+        <legend>@Html.DisplayNameFor(model => model.TotalNumberOfPars)</legend>
+        <h3>@Html.DisplayFor(model => model.TotalNumberOfPars)</h3>
     </fieldset>
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(model => model.TotalNumberOfBirdies)</legend>
+        <h3>@Html.DisplayFor(model => model.TotalNumberOfBirdies)</h3>
+    </fieldset>
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(model => model.TotalNumberOfEagles)</legend>
+        <h3>@Html.DisplayFor(model => model.TotalNumberOfEagles)</h3>
+    </fieldset>
+
 </section
 
 @section Scripts {
