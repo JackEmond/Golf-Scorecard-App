@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MvcGolfScorecardApp.Data;
 using MvcGolfScorecardApp.Models;
+using Newtonsoft.Json.Linq;
 using System.Linq;
 
 namespace MvcGolfScorecardApp.Controllers
@@ -31,10 +32,23 @@ namespace MvcGolfScorecardApp.Controllers
                 BestScore18Holes = bestScore18Holes,
                 TotalNumberOfBirdies = getTotalNumberOf(-1),
                 TotalNumberOfPars = getTotalNumberOf(0),
-                TotalNumberOfEagles = getTotalNumberOf(-2)
+                TotalNumberOfEagles = getTotalNumberOf(-2),
+                TotalNumberOfHoleInOnes = getTotalNumberOfHoleInOnes(),
             };
 
             return View(statsViewModel);
+        }
+
+        private int getTotalNumberOfHoleInOnes()
+        {
+            return _context.Scorecard
+                .AsEnumerable() 
+                .Sum(s => new List<int>{
+                    s.HoleOne, s.HoleTwo, s.HoleThree, s.HoleFour, s.HoleFive,
+                    s.HoleSix, s.HoleSeven, s.HoleEight, s.HoleNine, s.HoleTen,
+                    s.HoleEleven, s.HoleTwelve, s.HoleThirteen, s.HoleFourteen,
+                    s.HoleFifteen, s.HoleSixteen, s.HoleSeventeen, s.HoleEighteen
+                }.Count(shots => shots == 1));
         }
 
         private int getTotalNumberOf(int value)
