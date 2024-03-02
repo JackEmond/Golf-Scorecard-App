@@ -9,6 +9,7 @@ namespace MvcGolfScorecardApp.Models
         [Required]
         [Display(Name = "Date Played")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DatePlayed { get; set; }
 
 
