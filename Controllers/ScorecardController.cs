@@ -108,6 +108,10 @@ namespace MvcGolfScorecardApp.Controllers
         // GET: Scorecard/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            //Set the header
+            ViewBag.HeaderTitle = "Edit Scorecard";
+            ViewBag.HeaderBackButtonUrl = $"/Scorecard/Details/{id}";
+
             if (id == null || _context.Scorecard == null)
             {
                 return NotFound();
