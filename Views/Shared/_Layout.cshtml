@@ -13,9 +13,11 @@
 <body>
     <header>
         <span class="align-logo-middle"></span>
-       <a asp-area="" asp-controller="scorecard" asp-action="Index"><img height=100vh src="~/images/logo.png"></a>
+       <a asp-area="" asp-controller="Scorecard" asp-action="Index"><img height=100vh src="~/images/logo.png"></a>
         <div class="header-right">
-            <a>Advanced Stats</a>
+            <a>
+                <a asp-area="" asp-controller="AdvancedStats" asp-action="Index">Advanced Stats</a>
+            </a>
             <a> by Jack Emond </a>
         </div>
     </header>
