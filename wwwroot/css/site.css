@@ -394,3 +394,40 @@ input[type=date], input[type=text], input[type=number], #course-select select {
         }
 }
 
+
+/***************************
+    About
+***************************/
+.about-container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 55vh;
+    justify-content: flex-start;
+    display: flex;
+    max-width: 1800px;
+    margin: 0 auto;
+    color: rgb(41, 41, 41);
+}
+
+.about-container .item h2 {
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+    padding: 0 20%;
+}
+
+
+.about-container .item {
+    width: 60%;
+    text-align: center;
+}
+
+.about-container .imag {
+    width: 40%;
+}
+
+.about-container .imag img {
+    width: 100%;
+    padding: 15% 0%;
+}
