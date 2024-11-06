@@ -151,7 +151,8 @@ main {
 .index-right {
     padding-top: 60px;
     margin: 20px;
-    width: 70%;
+    /* width: 70%*/
+    width: 95%;
     float: right;
 }
 
